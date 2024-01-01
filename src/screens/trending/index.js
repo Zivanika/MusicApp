@@ -2,7 +2,7 @@ import React from 'react'
 
 function trending() {
   return (
-    <div>
+    <div className='screen-container'>
       Trending
     </div>
   )

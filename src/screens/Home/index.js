@@ -1,25 +1,44 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import  ReactDOM  from 'react-router-dom'
 import { BrowserRouter as Router,Route,Routes } from 'react-router-dom'
-import favourites from '../favourites'
-import feed from '../feed'
-import trending from '../trending'
-import player from '../player'
-import library from '../library'
+import Login from '../Auth/login'
+import Favourites from '../Favourites'
+import Feed from '../Feed'
+import Trending from '../Trending'
+import Player from '../Player'
+import Library from '../Library'
 import Sidebar from '../../components/sidebar' 
 import './home.css'
-function index() {
-  return (
-
-      <Router>
+import { setClientToken } from '../../spotify'
+function Index() {
+  const[token,setToken]=useState("");
+  useEffect(()=>{
+    const token=window.localStorage.getItem("token");
+    const hash=window.location.hash;
+    window.location.hash="";
+    if(!token &&hash){
+      const _token=hash.split("&")[0].split('=')[1];
+    window.localStorage.setItem("token",_token);
+    setToken(_token);
+    setClientToken(_token);
+    }
+    else{
+      setToken(token);
+      setClientToken(token);
+    }
+    
+  },[])
+  return !token?(
+    <Login/>):
+      (<Router>
         <div className="main-body">
           <Sidebar/>
         <Routes>
-            <Route path="/" element={<library/>}></Route>
-            <Route path="/trending" element={<trending/>}></Route>
-            <Route path="/feed" element={<feed/>}></Route>
-            <Route path="/favourites" element={<favourites/>}></Route>
-            <Route path="/player" element={<player/>}></Route>
+            <Route path="/" element={<Library/>}></Route>
+            <Route path="/trending" element={<Trending/>}></Route>
+            <Route path="/feed" element={<Feed/>}></Route>
+            <Route path="/favourites" element={<Favourites/>}></Route>
+            <Route path="/player" element={<Player/>}></Route>
         </Routes>
         </div>
       </Router>
@@ -27,4 +46,4 @@ function index() {
   )
 }
 
-export default index
+export default Index
