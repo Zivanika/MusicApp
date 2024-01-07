@@ -9,7 +9,7 @@
     border-top-right-radius: 30px;
     background-color: #3e61d2;
     opacity: 1;
-    border: 2px solid white;
+    /* border: 2px solid white; */
     background-image: repeating-radial-gradient(
       circle at 0 0,
       transparent 0,
