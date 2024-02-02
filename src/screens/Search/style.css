@@ -1,0 +1,104 @@
+.formctrl{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 70px;
+    width: 700px;
+    border: 1px solid rgb(2, 1, 55);
+    box-shadow: 2px 2px 10px rgb(2, 1, 55);
+    margin-right: 4%;
+    outline: none;
+    border-radius: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    color: white;
+    caret-color: white;
+    font-size: medium;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+}
+.conctrl{
+    overflow: hidden;
+    display: flex; 
+     /* flex-direction: row; */
+    color: rgb(32, 27, 27);
+    /* border: 2px solid black; */
+    /* margin-top: 10px;
+    margin-bottom: 10px; */
+}
+.details{
+    /* display: flex;
+    justify-content: space-between;
+    flex-direction: row; */
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.resultctn{ 
+    overflow: hidden;
+    position: relative;
+    width: 15%;
+    height: 40%;
+    border-radius: 30px;
+    background-color: rbg(30,42,62);
+    border: 1px solid rgba(54,69,98,0.18);
+    padding: 1%;
+    margin-bottom: 2%;
+    background:linear-gradient(75deg,rgb(40,58,88)0%,rgba(54,69,98,0)100%);
+    transition: all 0.2s ease;
+}
+.resultctn:hover{
+    transform:scale(1.05);
+}
+.resultctn:hover .resultctn-fade{
+    opacity: 1;
+}
+.searchctn::-webkit-scrollbar {
+    width: 0; /* Set width to 0 to hide scrollbar */
+    background-color: transparent; /* Set background color to transparent */
+  }
+.searchctn{
+    /* display: grid;
+    grid-template-columns: repeat(3, .5fr); /* Three columns with equal width */
+    /* row-gap: 1px;  */ 
+    display: flex; 
+    /* flex-grow: 2; */
+     /* flex-direction: row important; */
+     overflow: hidden;
+     /* justify-content: space-between; */
+    /* width: 100%; */
+    /* height: 80%;  */
+    /* border: 2px solid  white; */
+    overflow: hidden;
+    margin-left: 50px;
+    flex-wrap: wrap;
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    overflow-y: auto;
+    /* justify-content: space-; */
+}
+.searchimg{
+    width: 160px;
+    height: 140px;
+    border-radius: 20px;
+    aspect-ratio: 1;
+}
+
+.resultctn-fade{
+    position: absolute;
+    /* border: 2px solid black; */
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    width: 90%;
+    height: 34%;
+    /* width: 80px;
+    height: 80px; */
+    border-radius: 20px;
+    background: linear-gradient(180deg,rgba(54,69,98,0)10%,rgba(54,69,98,1)100%);
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    padding: 5%;
+    transition: 0.5s ease;
+    /* border: 2px solid white; */
+}

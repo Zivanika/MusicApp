@@ -1,0 +1,9 @@
+.main-body{
+    width: 100vw;
+    height: 100vh;
+    /* background-color: "#E99D72"; */
+    background-color: rgb(233, 157, 114);
+    border-radius: 30px;
+    display: flex;
+    /* margin-top: 20px; */
+}
