@@ -2,7 +2,7 @@ import axios from 'axios'
 const authEndpoint="https://accounts.spotify.com/authorize?"
 const clientID="a725b6e62d8a4013a36e3a19c00350c9"
 // const clientID="fd0a111965944f4c8c9929ef07f7b313"
-const redirectUri="http://localhost:3000"
+const redirectUri="https://zivanika.github.io/MusicApp"
 const scopes=["user-library-read","playlist-read-private"]
 export const loginEndpoint=`${authEndpoint}client_id=${clientID}&redirect_uri=${redirectUri}&scope=${scopes.join("%20")}&response_type=token&show_dialog=true`;
 // a725b6e62d8a4013a36e3a19c00350c9
